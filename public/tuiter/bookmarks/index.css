@@ -1,0 +1,116 @@
+body {
+    background-color: black;
+    padding-left: 16px;
+}
+
+/* For part A */
+.wd-bookmarks-border {
+    border-style: solid;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+}
+.wd-bookmarks-margin {
+    margin-left: 16px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-right: 16px;
+}
+
+.wd-bookmarks-font {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+/* For part B */
+.wd-actual-bookmark-border {
+    border-style: solid;
+    border-top-width: 0px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+}
+
+.wd-avatar-image-style {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    float: left;
+}
+
+/* For part C */
+.wd-actual-bookmark-float {
+    padding-left: 12px;
+    float: left;
+}
+
+.wd-actual-bookmark-author-name {
+    font-size: 15px;
+}
+.wd-actual-bookmark-author-color {
+    color: white;
+}
+.wd-actual-bookmark-login-color {
+    color: lightgray;
+}
+
+/* For part D */
+.wd-tuit-content-margin {
+    margin-right: 16px;
+    max-width: 506px;
+}
+
+/* For part E */
+.wd-banner-size {
+    width: 504px;
+    height: 264px;
+    border: 1px;
+    border-style: solid;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-top: 12px;
+}
+
+/* For part F */
+.wd-after-banner-border {
+    width: 504px;
+    border-left: 1px;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-top: 0px;
+    border-style: solid;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.wd-after-banner-content {
+    font-size: 15px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* For part G */
+.wd-icon-margin {
+    margin-top: 12px;
+}
+.wd-icon-spacing {
+    float: left;
+    width: 25%;
+}
+.wd-icon-image-size {
+    width: 15px;
+    height: 15px;
+    filter: grayscale(100%);
+}
+.wd-icon-number-margin {
+    margin-left: 12px;
+}
+.wd-icon-image-special-red {
+    filter: grayscale(0%) saturate(10);
+}
+.wd-icon-number-special-red {
+    color: red;
+}
