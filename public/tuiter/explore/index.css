@@ -19,8 +19,8 @@
 }
 
 .wd-news-image {
-    height: 100px;
-    width: 100px;
+    width: max-content;
+    object-fit: contain;
     border-top-left-radius: 3ex;
     border-top-right-radius: 3ex;
     border-bottom-left-radius: 3ex;
@@ -54,6 +54,8 @@
 
 .wd-whotofo-logo {
     border-radius: 50%;
+    object-fit: contain;
+    height: max-content;
 }
 
 .nav-item>a.active {
