@@ -1,10 +1,9 @@
 .wd-section-one-border-color {
     border-style: solid;
-    color: rgb(233, 232, 232);
-    border-top-width: 1px;
-    border-right-width: 2px;
-    border-bottom-width: 1px;
-    border-left-width: 2px;
+    border-left-color: rgb(224, 227, 231);
+    border-right-color: rgb(224, 227, 231);
+    border-top-color: white;
+    border-bottom-color: white;
 }
 
 .wd-search-text-box {
@@ -33,13 +32,11 @@
     border-top-right-radius: 40ex;
     border-bottom-left-radius: 40ex;
     border-bottom-right-radius: 40ex;
-    border-color: lightgray;
-    border-width: 2px;
-    border-style: solid;
+    height: auto;
 }
 
 .btn-primary.override-bs-tweet {
-    background-color: rgb(24, 114, 216);
+    background-color: rgb(55, 138, 232);
     border-top-left-radius: 40ex;
     border-top-right-radius: 40ex;
     border-bottom-left-radius: 40ex;
@@ -48,12 +45,17 @@
 }
 
 .btn-primary.override-bs-follow {
-    background-color: rgb(24, 114, 216);
+    background-color: black;
     border-radius: 140px;
     height: 40px;
+    border-color: black;
     width: fit-content;
 }
 
 .wd-whotofo-logo {
     border-radius: 50%;
+}
+
+.nav-item>a.active {
+    font-weight: bolder;
 }
