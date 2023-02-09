@@ -1,62 +1,77 @@
 .wd-section-one-border-color {
-    border-style: solid;
-    border-left-color: rgb(224, 227, 231);
-    border-right-color: rgb(224, 227, 231);
-    border-top-color: white;
-    border-bottom-color: white;
+  border-style: solid;
+  border-left-color: rgb(37, 36, 36);
+  border-right-color: rgb(37, 36, 36);
+  border-top-color: rgb(37, 36, 36);
+  border-bottom-color: rgb(37, 36, 36);
 }
 
 .wd-search-text-box {
-    border-color: white;
-    width: 90%;
+  border-color: white;
+  width: 90%;
 }
 
 .wd-news-title {
-    color: black;
-    font-size: 16px;
-    font-weight: bold;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.wd-news-title-regular {
+  color: white;
+  font-size: 16px;
 }
 
 .wd-news-image {
-    width: max-content;
-    object-fit: contain;
-    border-top-left-radius: 3ex;
-    border-top-right-radius: 3ex;
-    border-bottom-left-radius: 3ex;
-    border-bottom-right-radius: 3ex;
+  width: max-content;
+  object-fit: contain;
+  border-top-left-radius: 3ex;
+  border-top-right-radius: 3ex;
+  border-bottom-left-radius: 3ex;
+  border-bottom-right-radius: 3ex;
 }
 
 .wd-search-bar-box {
-    border-top-left-radius: 40ex;
-    border-top-right-radius: 40ex;
-    border-bottom-left-radius: 40ex;
-    border-bottom-right-radius: 40ex;
-    height: auto;
+  border-top-left-radius: 40ex;
+  border-top-right-radius: 40ex;
+  border-bottom-left-radius: 40ex;
+  border-bottom-right-radius: 40ex;
+  height: auto;
 }
 
 .btn-primary.override-bs-tweet {
-    background-color: rgb(55, 138, 232);
-    border-top-left-radius: 40ex;
-    border-top-right-radius: 40ex;
-    border-bottom-left-radius: 40ex;
-    border-bottom-right-radius: 40ex;
-    width: 100%;
+  background-color: rgb(55, 138, 232);
+  border-top-left-radius: 40ex;
+  border-top-right-radius: 40ex;
+  border-bottom-left-radius: 40ex;
+  border-bottom-right-radius: 40ex;
+  width: 100%;
 }
 
 .btn-primary.override-bs-follow {
-    background-color: black;
-    border-radius: 140px;
-    height: 40px;
-    border-color: black;
-    width: fit-content;
+  border-radius: 140px;
+  height: 40px;
+  border-color: black;
+  width: fit-content;
 }
 
 .wd-whotofo-logo {
-    border-radius: 50%;
-    object-fit: contain;
-    height: max-content;
+  border-radius: 50%;
+  object-fit: contain;
+  height: max-content;
 }
 
-.nav-item>a.active {
-    font-weight: bolder;
+.nav-item > a.active {
+  font-weight: bolder;
+}
+
+.wd-icon-spacing {
+  float: left;
+  width: 25%;
+}
+
+.wd-post-border {
+  color: white;
+  border-style: solid;
+  border: 22px;
 }

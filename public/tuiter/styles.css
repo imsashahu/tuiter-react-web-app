@@ -1,18 +1,18 @@
 .wd-border-color-dark {
-    color: rgb(47, 51, 54);
+  color: rgb(47, 51, 54);
 }
 
 .wd-news-small-gray-letter-font {
-    color: rgb(110, 118, 125);
-    font-size: 13px;
+  color: rgb(110, 118, 125);
+  font-size: 15px;
 }
 
 .float-done {
-    clear: both;
+  clear: both;
 }
 .float-left {
-    float: left;
+  float: left;
 }
 .float-right {
-    float: right;
+  float: right;
 }
