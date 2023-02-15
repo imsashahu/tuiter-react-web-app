@@ -1,0 +1,30 @@
+[
+  {
+    "_id": "123",
+    "avatar": "spacex.png",
+    "name": "SpaceX",
+    "login": "SpaceX",
+    "time": "23h",
+    "content": "Dennis and Akiko Tito are the first two crewmembers on Starship second commercial spaceflight around the Moon.",
+    "image": "post_spacex.jpeg",
+    "imageTitle": "",
+    "imageContent": "",
+    "comment": "595",
+    "retweet": "1,168",
+    "like": "11.1k"
+  },
+  {
+    "_id": "234",
+    "avatar": "tesla.png",
+    "name": "Tesla",
+    "login": "Tesla",
+    "time": "1d",
+    "content": "What the Tesla Giga Nevada factory will look like when finished.",
+    "image": "post_tesla.jpeg",
+    "imageTitle": "Countdown: Inspiration4 Mission to Space | Netflix Official Site",
+    "imageContent": "From training to launch to landing, this all-access docuseries rides along with the Inspiration4 crew on the first all-civilian orbital pace ...",
+    "comment": "11.6k",
+    "retweet": "1,333",
+    "like": "23.1k"
+  }
+]
