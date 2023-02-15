@@ -23,7 +23,7 @@ const PostSummaryItem = ({
   },
 }) => {
   return (
-    <div class="border-top border-gray row">
+    <div class="border border-light row">
       <div class="col-2 pt-2 ps-3 pe-0">
         <img
           src={`/images/${post.avatar}`}
