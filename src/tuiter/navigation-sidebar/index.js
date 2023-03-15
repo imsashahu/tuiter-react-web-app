@@ -22,7 +22,7 @@ const NavigationSidebar = () => {
         Explore
       </Link>
       <Link
-        to="/tuiter/home"
+        to="/tuiter/notifications"
         className={`list-group-item ${
           active === "notifications" ? "active" : ""
         }`}
@@ -30,31 +30,31 @@ const NavigationSidebar = () => {
         Notifications
       </Link>
       <Link
-        to="/tuiter/explore"
+        to="/tuiter/messages"
         className={`list-group-item ${active === "messages" ? "active" : ""}`}
       >
         Messages
       </Link>
       <Link
-        to="/tuiter/home"
+        to="/tuiter/bookmarks"
         className={`list-group-item ${active === "bookmarks" ? "active" : ""}`}
       >
         Bookmarks
       </Link>
       <Link
-        to="/tuiter/explore"
+        to="/tuiter/lists"
         className={`list-group-item ${active === "lists" ? "active" : ""}`}
       >
         Lists
       </Link>
       <Link
-        to="/tuiter/home"
+        to="/tuiter/profile"
         className={`list-group-item ${active === "profile" ? "active" : ""}`}
       >
         Profile
       </Link>
       <Link
-        to="/tuiter/explore"
+        to="/tuiter/more"
         className={`list-group-item ${active === "more" ? "active" : ""}`}
       >
         More
