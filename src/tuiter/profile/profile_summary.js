@@ -23,7 +23,7 @@ const ProfileSummaryItem = () => {
           <div className="fw-bold fs-5">
             {profile.firstName} {profile.lastName}
           </div>
-          <div>6114 tweets</div>
+          <div>6,114 tweets</div>
         </div>
       </div>
 
