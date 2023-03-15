@@ -5,6 +5,8 @@ import { faMessage } from "@fortawesome/free-solid-svg-icons";
 import { faRetweet } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faInbox } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch } from "react-redux";
+import { deleteTuit } from "../tuits/tuits-reducer.js";
 
 const PostSummaryItem = ({
   post = {
@@ -22,6 +24,11 @@ const PostSummaryItem = ({
     tuit: "You want to wake up in the morning and think the future is going to be great - and that’s what being a spacefaring civilization is all about. It’s about believing in the future and thinking that the future will be better than the past. And I can’t think of anything more exciting than going out there and being among the stars",
   },
 }) => {
+  const dispatch = useDispatch();
+  const deleteTuitHandler = (id) => {
+    dispatch(deleteTuit(id));
+  };
+
   return (
     <div class="border border-1 row">
       <div class="col-2 pt-2 ps-3 pe-0">
@@ -34,12 +41,15 @@ const PostSummaryItem = ({
       </div>
       <div class="col-10 pt-2">
         <div>
+          <i
+            className="bi bi-x-lg float-end"
+            onClick={() => deleteTuitHandler(post._id)}
+          ></i>
           <span class="fw-bold text-black">{post.userName}</span>
           <FontAwesomeIcon icon={faCircleCheck} style={{ color: "blue" }} />
           <span class="text-dark">
             {post.handle} · {post.time}
           </span>
-          <span class="float-end text-dark">···</span>
         </div>
         <p class="text-black">{post.tuit}</p>
         <div class="text-dark mt-2 row">
