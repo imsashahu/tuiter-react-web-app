@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+import { faCircleCheck, faShareNodes } from "@fortawesome/free-solid-svg-icons";
 import { faMessage } from "@fortawesome/free-solid-svg-icons";
 import { faRetweet } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
@@ -8,25 +8,25 @@ import { faInbox } from "@fortawesome/free-solid-svg-icons";
 
 const PostSummaryItem = ({
   post = {
-    avatar: "spacex.png",
-    name: "SpaceX",
-    login: "SpaceX",
-    time: "23h",
-    content:
-      "Dennis and Akiko Tito are the first two crewmembers on Starship second commercial spaceflight around the Moon.",
-    image: "post_spacex.jpeg",
-    imageTitle: "",
-    imageContent: "",
-    comment: "595",
-    retweet: "1,168",
-    like: "11.1k",
+    topic: "Space",
+    userName: "SpaceX",
+    title:
+      "100s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
+    time: "2h",
+    image: "spacex.png",
+    liked: true,
+    replies: 123,
+    retuits: 432,
+    likes: 2345,
+    handle: "@spacex",
+    tuit: "You want to wake up in the morning and think the future is going to be great - and that’s what being a spacefaring civilization is all about. It’s about believing in the future and thinking that the future will be better than the past. And I can’t think of anything more exciting than going out there and being among the stars",
   },
 }) => {
   return (
-    <div class="border border-light row">
+    <div class="border border-1 row">
       <div class="col-2 pt-2 ps-3 pe-0">
         <img
-          src={`/images/${post.avatar}`}
+          src={`/images/${post.image}`}
           class="p-0 m-0 border-0 rounded-circle "
           width="60px"
           height="60px"
@@ -34,43 +34,36 @@ const PostSummaryItem = ({
       </div>
       <div class="col-10 pt-2">
         <div>
-          <span class="fw-bold text-black">{post.name}</span>
+          <span class="fw-bold text-black">{post.userName}</span>
           <FontAwesomeIcon icon={faCircleCheck} style={{ color: "blue" }} />
           <span class="text-dark">
-            @{post.login} · {post.time}
+            {post.handle} · {post.time}
           </span>
           <span class="float-end text-dark">···</span>
         </div>
-        <p class="text-black">{post.content}</p>
-        <div class="rounded-3 border border-1 border-gray">
-          <img src={`/images/${post.image}`} width="100%" class="rounded-3" />
-          <div>
-            <p class="m-2 text-black">{post.imageTitle}</p>
-            <p class="text-dark m-2">{post.imageContent}</p>
-          </div>
-        </div>
+        <p class="text-black">{post.tuit}</p>
         <div class="text-dark mt-2 row">
           <div class="float-left w-25">
             <p>
               <FontAwesomeIcon icon={faMessage} style={{ color: "gray" }} />
-              <span class="ms-1">{post.comment}</span>
+              <span class="ms-1">{post.replies}</span>
             </p>
           </div>
           <div class="float-left w-25">
             <p>
               <FontAwesomeIcon icon={faRetweet} style={{ color: "gray" }} />
-              <span class="ms-1">{post.retweet}</span>
+              <span class="ms-1">{post.retuits}</span>
             </p>
           </div>
           <div class="float-left w-25">
             <p>
-              <FontAwesomeIcon icon={faHeart} style={{ color: "gray" }} />
-              <span class="ms-1">{post.like}</span>
+              <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />
+              <span class="ms-1">{post.likes}</span>
             </p>
           </div>
           <div class="float-left w-25">
             <p>
-              <FontAwesomeIcon icon={faInbox} style={{ color: "gray" }} />
+              <FontAwesomeIcon icon={faShareNodes} style={{ color: "gray" }} />
             </p>
           </div>
         </div>
