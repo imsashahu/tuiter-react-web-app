@@ -11,12 +11,21 @@ import {
 const ProfileSummaryItem = () => {
   return (
     <div>
-      <h3>
-        <FontAwesomeIcon icon={faLongArrowAltLeft} style={{ color: "black" }} />
-        <span>
-          {profile.firstName} {profile.lastName}
-        </span>
-      </h3>
+      <div className="row mb-2">
+        <div className="float-left w-25">
+          <FontAwesomeIcon
+            icon={faLongArrowAltLeft}
+            style={{ color: "black" }}
+            className="ms-5 mt-2 fa-2xl"
+          />
+        </div>
+        <div className="float-left w-75">
+          <div className="fw-bold fs-5">
+            {profile.firstName} {profile.lastName}
+          </div>
+          <div>6114 tweets</div>
+        </div>
+      </div>
 
       <div className="mb-5">
         <img src={`/images/${profile.bannerPicture}`} width="100%" />
