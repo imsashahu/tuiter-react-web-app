@@ -21,17 +21,18 @@ const tuitsSlice = createSlice({
   name: "tuits",
   initialState: tuits,
   reducers: {
-    deleteTuit(state, action) {
-      const index = state.findIndex((tuit) => tuit._id === action.payload);
-      state.splice(index, 1);
-    },
-
     createTuit(state, action) {
       state.unshift({
         ...action.payload,
         ...templateTuit,
         _id: new Date().getTime(),
       });
+      console.log("Tuit");
+      console.log(state);
+    },
+    deleteTuit(state, action) {
+      const index = state.findIndex((tuit) => tuit._id === action.payload);
+      state.splice(index, 1);
     },
   },
 });
