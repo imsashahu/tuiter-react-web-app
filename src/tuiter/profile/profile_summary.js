@@ -7,16 +7,17 @@ import {
   faLocationDot,
   faLongArrowAltLeft,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const ProfileSummaryItem = () => {
   return (
     <div>
       <div className="row mb-2">
-        <div className="float-left w-25">
+        <div className="float-left w-auto">
           <FontAwesomeIcon
             icon={faLongArrowAltLeft}
             style={{ color: "black" }}
-            className="ms-5 mt-2 fa-2xl"
+            className="ms-3 mt-2 fa-2xl"
           />
         </div>
         <div className="float-left w-75">
@@ -39,12 +40,15 @@ const ProfileSummaryItem = () => {
           />
         </div>
 
-        <button className="border-1 border-dark bg-white rounded-pill ps-2 pe-2 float-end m-2">
+        <Link
+          className="border-dark bg-white rounded-pill ps-2 pe-2 float-end m-1 btn btn-light"
+          to="/tuiter/edit-profile"
+        >
           Edit Profile
-        </button>
+        </Link>
       </div>
 
-      <div className="border-solid border-1">
+      <div className="pt-3">
         <div className="fw-bolder fs-4">
           {profile.firstName} {profile.lastName}
         </div>
