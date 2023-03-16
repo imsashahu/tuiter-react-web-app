@@ -1,10 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import profile from "../profile/profiles.json";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import {
+  editFirstName,
+  editLastName,
+  editBio,
+  editLocation,
+  editWebsite,
+  editDOB,
+} from "../profile/profile-reducer.js";
 
 const EditProfile = () => {
+  const profile = useSelector((state) => state.profile);
+  const [firstName, setFirstName] = useState(profile.firstName);
+  const [lastName, setLastName] = useState(profile.lastName);
+  const [bio, setBio] = useState(profile.bio);
+  const [location, setLocation] = useState(profile.location);
+  const [website, setWebsite] = useState(profile.website);
+  const [dob, setDob] = useState(profile.dateOfBirth);
+
+  const dispatch = useDispatch();
+
+  const onClickSaveHandler = () => {
+    dispatch(editFirstName(firstName));
+    dispatch(editLastName(lastName));
+    dispatch(editBio(bio));
+    dispatch(editLocation(location));
+    dispatch(editWebsite(website));
+    dispatch(editDOB(dob));
+  };
+
   return (
     <div>
       <div className="row mb-2">
@@ -24,6 +51,7 @@ const EditProfile = () => {
           className="bg-black text-white rounded-pill btn fw-bold w-auto ms-5"
           style={{ width: "fit-content" }}
           to="/tuiter/profile"
+          onClick={() => onClickSaveHandler()}
         >
           Save
         </Link>
@@ -49,6 +77,13 @@ const EditProfile = () => {
             className="form-control"
             id="floatingName"
             placeholder="Please enter name"
+            value={firstName + " " + lastName}
+            onChange={(e) => {
+              const [first, last] = e.target.value.split(" ");
+              console.log(e.target.value.split(" "));
+              setFirstName(first);
+              setLastName(last);
+            }}
           />
           <label for="floatingName">Name</label>
         </div>
@@ -58,6 +93,10 @@ const EditProfile = () => {
             className="form-control h-auto"
             placeholder="Leave a biography here"
             id="floatingBio"
+            value={bio}
+            onChange={(e) => {
+              setBio(e.target.value);
+            }}
           ></textarea>
           <label for="floatingBio">Bio</label>
         </div>
@@ -68,6 +107,10 @@ const EditProfile = () => {
             className="form-control"
             id="floatingLocation"
             placeholder="Please enter location"
+            value={location}
+            onChange={(e) => {
+              setLocation(e.target.value);
+            }}
           />
           <label for="floatingLocation">Location</label>
         </div>
@@ -78,6 +121,10 @@ const EditProfile = () => {
             className="form-control"
             id="floatingWeb"
             placeholder="Please enter website"
+            value={website}
+            onChange={(e) => {
+              setWebsite(e.target.value);
+            }}
           />
           <label for="floatingWeb">Website</label>
         </div>
@@ -88,6 +135,10 @@ const EditProfile = () => {
             className="form-control"
             id="floatingDOB"
             placeholder="Please enter DOB"
+            value={dob}
+            onChange={(e) => {
+              setDob(e.target.value);
+            }}
           />
           <label for="floatingDOB">Birth date</label>
         </div>

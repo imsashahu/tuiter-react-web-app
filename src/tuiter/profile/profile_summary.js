@@ -1,6 +1,5 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import profile from "./profiles.json";
 import {
   faCalendar,
   faComment,
@@ -8,19 +7,25 @@ import {
   faLongArrowAltLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const ProfileSummaryItem = () => {
+  const profile = useSelector((state) => state.profile);
+
   return (
     <div>
       <div className="row mb-2">
         <div className="float-left w-auto">
-          <FontAwesomeIcon
-            icon={faLongArrowAltLeft}
-            style={{ color: "black" }}
-            className="ms-3 mt-2 fa-2xl"
-          />
+          <Link to="/tuiter/home">
+            <FontAwesomeIcon
+              icon={faLongArrowAltLeft}
+              style={{ color: "black" }}
+              className="ms-3 mt-2 fa-2xl"
+            />
+          </Link>
         </div>
-        <div className="float-left w-75">
+
+        <div className="float-left w-50">
           <div className="fw-bold fs-5">
             {profile.firstName} {profile.lastName}
           </div>
