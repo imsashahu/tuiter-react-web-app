@@ -35,7 +35,7 @@ const EditProfile = () => {
   return (
     <div>
       <div className="row mb-2">
-        <div className="float-left w-auto mt-2">
+        <div className="w-auto mt-2">
           <Link to="/tuiter/profile">
             <FontAwesomeIcon
               icon={faX}
@@ -44,11 +44,11 @@ const EditProfile = () => {
             />
           </Link>
         </div>
-        <div className="float-left w-50 mt-1">
+        <div className="w-50 mt-1">
           <div className="fw-bold fs-5">Edit Profile</div>
         </div>
         <Link
-          className="bg-black text-white rounded-pill btn fw-bold w-auto ms-5"
+          className="bg-black text-white rounded-pill btn fw-bold ms-auto me-4"
           style={{ width: "fit-content" }}
           to="/tuiter/profile"
           onClick={() => onClickSaveHandler()}
