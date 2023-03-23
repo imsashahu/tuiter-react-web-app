@@ -6,13 +6,16 @@ import { faRetweet } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faInbox } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
-import { deleteTuit } from "../tuits/tuits-reducer.js";
+import {
+  deleteTuitThunk,
+  updateTuitThunk,
+} from "../../services/tuits-thunks.js";
 
 const PostSummaryItem = ({ post }) => {
   const dispatch = useDispatch();
   const deleteTuitHandler = (id) => {
     console.log("Deleting", id);
-    dispatch(deleteTuit(id));
+    dispatch(deleteTuitThunk(id));
   };
 
   return (
@@ -53,8 +56,39 @@ const PostSummaryItem = ({ post }) => {
           </div>
           <div className="float-left w-25">
             <p>
-              <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />
-              <span className="ms-1">{post.likes}</span>
+              {/* <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />
+              <span className="ms-1">{post.likes}</span> */}
+              <div>
+                {post.liked && (
+                  <i
+                    className="bi bi-heart-fill me-2 text-danger"
+                    onClick={() =>
+                      dispatch(
+                        updateTuitThunk({
+                          ...post,
+                          likes: post.likes - 1,
+                          liked: false,
+                        })
+                      )
+                    }
+                  ></i>
+                )}
+                {!post.liked && (
+                  <i
+                    className="bi bi-heart-fill me-2 text-black"
+                    onClick={() =>
+                      dispatch(
+                        updateTuitThunk({
+                          ...post,
+                          likes: post.likes + 1,
+                          liked: true,
+                        })
+                      )
+                    }
+                  ></i>
+                )}
+                {post.likes}
+              </div>
             </p>
           </div>
           <div className="float-left w-25">
